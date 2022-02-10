@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         finishPanel.SetActive(false);
         
         if (PlayerPrefs.HasKey("FinalScore"))
@@ -60,8 +61,8 @@ public class PlayerController : MonoBehaviour
 
     void GetInput()
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
+        //input.x = Input.GetAxisRaw("Horizontal");
+        //input.y = Input.GetAxisRaw("Vertical");
 
         input.y = moveJoystick.Vertical;
         input.x = moveJoystick.Horizontal;
